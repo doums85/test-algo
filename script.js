@@ -41,7 +41,7 @@ function solve() {
 
   //cm3
   let calc = width * height * length;
-  // si une messure du colis est superieur a 150cm => special
+
   let dimension = [width, height, length];
 
   dimension.map((el) => {
