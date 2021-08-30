@@ -51,12 +51,16 @@ function solve() {
       if (mass >= 20) {
         result.style.color = 'red';
         return (result.innerHTML = 'Refected');
+      } else {
+        result.style.color = 'orange';
+        return (result.innerHTML = 'Special');
       }
-      return (result.innerHTML = 'Special');
     }
-    if (mass >= 20) return (result.innerHTML = 'Special');
+    if (mass >= 20) {
+      result.style.color = 'orange';
+      return (result.innerHTML = 'Special')
+    };
     // case 3: Normal
     return (result.innerHTML = 'Standard');
   });
 }
-
