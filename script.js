@@ -24,6 +24,7 @@ function solve(width, height, length, mass) {
 solve(data[0], data[1], data[2], data[3]); =======*/
 
 const query = (id) => document.querySelector(id).value;
+let inputs = document.getElementsByTagName('input');
 
 function solve() {
   let width = query('#width');
@@ -32,7 +33,6 @@ function solve() {
   let mass = query('#mass');
 
   let result = document.querySelector('#tas');
-  let inputs = document.getElementsByTagName('input');
 
   for (i = 0; i < inputs.length; ++i) {
     if (isNaN(inputs[i].value) || inputs[i].value < 1 || !inputs[i].value)
@@ -63,4 +63,11 @@ function solve() {
     // case 3: Normal
     return (result.innerHTML = 'Standard');
   });
+}
+
+
+function reset() {
+  for (i = 0; i < inputs.length; ++i) {
+    inputs[i].value =''
+  }
 }
